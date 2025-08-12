@@ -1,21 +1,16 @@
-// stores/cart.js (ou Card.js si tu veux vraiment)
-import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useCartStore = defineStore('cart', {
-  state: () => ({
-    items: []
-  }),
-  getters: {
-    totalPrice: (state) => state.items.reduce((total, item) => total + item.price, 0)
-  },
-  actions: {
-    addItem(item) {
-      if (!this.items.find(i => i.id === item.id)) {
-        this.items.push(item)
-      }
-    },
-    removeItem(id) {
-      this.items = this.items.filter(item => item.id !== id)
+const items = ref([])
+
+export function useCart() {
+  function addItem(event) {
+    // Évite les doublons (optionnel)
+    if (!items.value.find(e => e.id === event.id)) {
+      items.value.push(event)
     }
   }
-})
+  function removeItem(id) {
+    items.value = items.value.filter(e => e.id !== id)
+  }
+  return { items, addItem, removeItem }
+}

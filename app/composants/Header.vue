@@ -1,4 +1,5 @@
 <script setup>
+import { useCart } from '~/composables/cart'
 
 </script>
 

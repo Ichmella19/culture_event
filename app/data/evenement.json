@@ -1,22 +1,50 @@
 [
   {
     "id": 1,
-    "title": "Concert Jazz à Cotonou",
-    "image": "/images/jazz-concert.jpg",
-    "date": "2025-09-15",
-    "location": "Salle des fêtes, Cotonou",
-    "price": 2500,
-    "category": "concert",
-    "description": "Une soirée inoubliable avec les meilleurs jazzmen du Bénin."
+    "title": "Festival de Musique Urbaine",
+    "date": "2025-08-20",
+    "location": "Cotonou",
+    "price": 5000,
+    "image": "/images/events/music.jpg"
   },
   {
     "id": 2,
-    "title": "Exposition Art Moderne",
-    "image": "/images/art-expo.jpg",
-    "date": "2025-09-20",
-    "location": "Galerie Nationale, Porto-Novo",
+    "title": "Salon de l'Innovation Technologique",
+    "date": "2025-09-05",
+    "location": "Parakou",
+    "price": 2000,
+    "image": "/images/events/tech.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Exposition d'Art Contemporain",
+    "date": "2025-09-15",
+    "location": "Porto-Novo",
+    "price": 3500,
+    "image": "/images/events/art.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Atelier Cuisine Africaine",
+    "date": "2025-09-25",
+    "location": "Cotonou",
     "price": 1500,
-    "category": "exposition",
-    "description": "Découvrez les œuvres d'artistes contemporains d'Afrique."
+    "image": "/images/events/cuisine.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Marathon International",
+    "date": "2025-10-02",
+    "location": "Abomey",
+    "price": 3000,
+    "image": "/images/events/marathon.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Conférence Leadership & Motivation",
+    "date": "2025-10-10",
+    "location": "Cotonou",
+    "price": 2500,
+    "image": "/images/events/conference.jpg"
   }
 ]

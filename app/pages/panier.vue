@@ -1,33 +1,33 @@
+<script setup>
+import { useCart } from '~/composables/cart'
+const { items, removeItem } = useCart()
+</script>
+
 <template>
-  <div class="p-6 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">Votre panier</h2>
-    <div v-if="cart.items.length === 0" class="text-gray-500">
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-6">🛒 Votre panier</h2>
+
+    <div v-if="items.length === 0" class="text-gray-600">
       Votre panier est vide.
     </div>
+
     <ul v-else>
       <li
-        v-for="item in cart.items"
+        v-for="item in items"
         :key="item.id"
-        class="flex justify-between items-center py-3 border-b"
+        class="flex justify-between items-center p-4 border-b"
       >
         <div>
           <p class="font-semibold">{{ item.title }}</p>
-          <p class="text-sm text-gray-600">{{ item.date }} - {{ item.location }}</p>
-          <p class="font-semibold">{{ item.price }} €</p>
+          <p class="text-sm text-gray-500">{{ item.date }} - {{ item.location }}</p>
         </div>
         <button
-          @click="cart.removeItem(item.id)"
-          class="text-red-600 hover:underline"
+          @click="removeItem(item.id)"
+          class="text-red-600 hover:text-red-800 font-bold"
         >
           Supprimer
         </button>
       </li>
     </ul>
-    <div class="mt-6 text-xl font-bold">Total : {{ cart.totalPrice }} €</div>
-  </div>
+  </section>
 </template>
-
-<script setup>
-import { useCartStore } from '~/stores/cart.js'
-const cart = useCartStore()
-</script>
