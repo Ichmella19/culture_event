@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Concert Jazz à Cotonou",
+    "image": "/images/jazz-concert.jpg",
+    "date": "2025-09-15",
+    "location": "Salle des fêtes, Cotonou",
+    "price": 2500,
+    "category": "concert",
+    "description": "Une soirée inoubliable avec les meilleurs jazzmen du Bénin."
+  },
+  {
+    "id": 2,
+    "title": "Exposition Art Moderne",
+    "image": "/images/art-expo.jpg",
+    "date": "2025-09-20",
+    "location": "Galerie Nationale, Porto-Novo",
+    "price": 1500,
+    "category": "exposition",
+    "description": "Découvrez les œuvres d'artistes contemporains d'Afrique."
+  }
+]
