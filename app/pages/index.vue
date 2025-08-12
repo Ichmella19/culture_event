@@ -7,14 +7,32 @@ const cart = useCart()
 
 function addToCart(event) {
   cart.addItem(event)
+
+  const search = ref('')
+
+  // Filtre conditionnel
+  const filteredEvents = computed(() => {
+    if (!search.value.trim()) {
+      return events.value // si rien tapé → tout afficher
+    }
+    return events.value.filter(e =>
+      e.title.toLowerCase().includes(search.value.toLowerCase())
+    )
+  })
+
+  // Panier
+  const cart = useCart()
+  function addToCart(event) {
+    cart.addItem(event)
+  }
 }
 </script>
 
 <template>
-  <section class="relative min-h-screen py-12 bg-gradient-to-br from-pink-50 via-orange-50 to-yellow-50">
+  <section class="relative min-h-screen py-28">
     <!-- Décorations flottantes -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-10 left-10 w-32 h-32 bg-pink-200 rounded-full blur-3xl opacity-40"></div>
+      <div class="absolute top-10 left-10 w-32 h-32 rounded-full blur-3xl opacity-40"></div>
       <div class="absolute bottom-20 right-20 w-40 h-40 bg-yellow-200 rounded-full blur-3xl opacity-40"></div>
     </div>
 
@@ -27,6 +45,13 @@ function addToCart(event) {
         Découvrez nos prochains moments de partage, de culture et de joie.  
         Réservez votre place et vivez l’expérience !
       </p>
+
+      <!-- <input
+      v-model="search"
+      type="text"
+      placeholder="Rechercher un événement..."
+      class="border p-2 rounded w-full mb-4"
+    /> -->
 
       <!-- Liste d'événements -->
       <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

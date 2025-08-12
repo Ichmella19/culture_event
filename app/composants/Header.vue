@@ -4,10 +4,10 @@ import { useCart } from '~/composables/cart'
 </script>
 
 <template>
-  <header class="flex items-center justify-between p-4 bg-gray-100">
+  <header class="flex items-center justify-between p-4 md:px-10 lg:px-28 xl:px-40 fixed z-50 w-full  bg-linear-to-r from-cyan-500 to-blue-500">
     <nav class="flex gap-4">
-      <NuxtLink to="/" class="text-blue-600 hover:underline">Accueil</NuxtLink>
-      <NuxtLink to="/panier" class="text-blue-600 hover:underline">Panier</NuxtLink>
+      <NuxtLink to="/" class=" text-xl hover:underline">Accueil</NuxtLink>
+      <NuxtLink to="/panier" class=" text-xl hover:underline">Panier</NuxtLink>
       <!-- Ajoute d'autres liens ici si besoin -->
     </nav>
 

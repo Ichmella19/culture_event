@@ -4,7 +4,7 @@ const { items, removeItem } = useCart()
 </script>
 
 <template>
-  <section class="max-w-4xl mx-auto p-6">
+  <section class="max-w-4xl mx-auto p-6 py-28">
     <h2 class="text-2xl font-bold mb-6">🛒 Votre panier</h2>
 
     <div v-if="items.length === 0" class="text-gray-600">

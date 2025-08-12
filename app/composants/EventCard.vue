@@ -3,7 +3,7 @@
     <img :src="event.image" :alt="event.title" class="event-image" />
 
     <div class="event-content">
-      <h2 class="event-title">{{ event.title }}</h2>
+      <h2 class="event-title font-semibold">{{ event.title }}</h2>
       <p class="event-date">{{ event.date }}</p>
       <p class="event-description">{{ event.description }}</p>
 
@@ -26,7 +26,7 @@ defineProps({
 <style scoped>
 .event-card {
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ defineProps({
   color: #007bff;
   text-decoration: none;
 }
-.event-link:hover {
+/* .event-link:hover {
   text-decoration: underline;
-}
+} */
 </style>
